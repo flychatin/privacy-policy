@@ -50,6 +50,41 @@
             Crashlytics</strong>. These services may collect anonymous usage data and crash logs (e.g., device model, OS
         version, crash stack traces). This data helps us identify and fix technical issues.</p>
 
+    <h4>2.3 Installed Applications List</h4>
+    <p>To provide app management features in the "Apps" tab, this application needs to read the list of installed applications on your device.</p>
+
+    <h5>Information Collected:</h5>
+    <ul>
+        <li>Application name</li>
+        <li>Package name</li>
+        <li>Version information</li>
+        <li>Installation date</li>
+        <li>Application size</li>
+        <li>Application icon</li>
+    </ul>
+
+    <h5>Purpose of Use:</h5>
+    <ul>
+        <li>Display installed applications list in the "Apps" tab</li>
+        <li>Provide search and filter functionality</li>
+        <li>Provide sorting functionality (by name, size, installation date)</li>
+        <li>Display application details</li>
+    </ul>
+
+    <h5>Data Processing:</h5>
+    <p><strong>Important:</strong> Your installed applications list information is <strong>only read and displayed locally</strong>. It will not be uploaded to any server or third-party service. All data processing is completed locally on your device.</p>
+
+    <h5>User Control:</h5>
+    <ul>
+        <li>When you first access the "Apps" tab, a data disclosure dialog will be displayed</li>
+        <li>You can choose to agree or decline</li>
+        <li>After declining, you can return to the previous page</li>
+        <li>You can reset the consent status at any time by clearing the app data</li>
+    </ul>
+
+    <h5>Permission Requirement:</h5>
+    <p>This feature requires the <code>QUERY_ALL_PACKAGES</code> permission. According to Google Play policy, using this permission requires explicit user consent and transparent data usage disclosure.</p>
+
     <h3>3. Third-Party Services</h3>
     <p>This application integrates the following third-party services for technical support:</p>
     <ul>
@@ -115,9 +150,11 @@
             <p><strong>Example:</strong> Install applications directly from the file manager.</p>
         </li>
         <li><strong>android.permission.QUERY_ALL_PACKAGES</strong>
-            <p><strong>Purpose:</strong> Query all installed apps.</p>
-            <p><strong>Example:</strong> Core functionality for the "App Manager" feature to list, backup, and uninstall
-                applications.</p>
+            <p><strong>Purpose:</strong> Read the list of installed applications.</p>
+            <p><strong>Use Case:</strong> Display, search, and sort installed applications in the "Apps" tab.</p>
+            <p><strong>Data Processing:</strong> All data is processed locally only and will not be uploaded to any server.</p>
+            <p><strong>User Consent:</strong> A data disclosure dialog will be displayed when first used, requiring explicit user consent.</p>
+            <p><strong>Example:</strong> Core functionality for the "App Manager" feature to list and view application details.</p>
         </li>
         <li><strong>android.permission.FOREGROUND_SERVICE</strong> & <strong>FOREGROUND_SERVICE_DATA_SYNC</strong>
             <p><strong>Purpose:</strong> Run foreground services for data synchronization.</p>
