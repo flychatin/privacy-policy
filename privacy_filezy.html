@@ -51,7 +51,8 @@
         version, crash stack traces). This data helps us identify and fix technical issues.</p>
 
     <h4>2.3 Installed Applications List</h4>
-    <p>To provide app management features in the "Apps" tab, this application needs to read the list of installed applications on your device.</p>
+    <p>To provide app management features in the "Apps" tab, this application needs to read the list of installed
+        applications on your device.</p>
 
     <h5>Information Collected:</h5>
     <ul>
@@ -72,7 +73,9 @@
     </ul>
 
     <h5>Data Processing:</h5>
-    <p><strong>Important:</strong> Your installed applications list information is <strong>only read and displayed locally</strong>. It will not be uploaded to any server or third-party service. All data processing is completed locally on your device.</p>
+    <p><strong>Important:</strong> Your installed applications list information is <strong>only read and displayed
+            locally</strong>. It will not be uploaded to any server or third-party service. All data processing is
+        completed locally on your device.</p>
 
     <h5>User Control:</h5>
     <ul>
@@ -83,7 +86,8 @@
     </ul>
 
     <h5>Permission Requirement:</h5>
-    <p>This feature requires the <code>QUERY_ALL_PACKAGES</code> permission. According to Google Play policy, using this permission requires explicit user consent and transparent data usage disclosure.</p>
+    <p>This feature requires the <code>QUERY_ALL_PACKAGES</code> permission. According to Google Play policy, using this
+        permission requires explicit user consent and transparent data usage disclosure.</p>
 
     <h3>3. Third-Party Services</h3>
     <p>This application integrates the following third-party services for technical support:</p>
@@ -127,10 +131,14 @@
 
     <h3>Location Permissions</h3>
     <ul>
-        <li><strong>android.permission.ACCESS_COARSE_LOCATION</strong>: Obtain approximate location via Wi-Fi or
-            cellular networks. Example: Required for local file sharing or Wi-Fi scanning features.</li>
-        <li><strong>android.permission.ACCESS_FINE_LOCATION</strong>: Obtain precise location. (Only if strictly
-            required for specific Wi-Fi functionalities).</li>
+        <li><strong>android.permission.ACCESS_COARSE_LOCATION</strong>: Obtain approximate location.
+            <strong>Purpose:</strong> Required to scan for local network (LAN) devices and identify Wi-Fi networks for
+            SMB/Samba connections.
+        </li>
+        <li><strong>android.permission.ACCESS_FINE_LOCATION</strong>: Obtain precise location.
+            <strong>Purpose:</strong> Necessary on newer Android versions to perform local device discovery and display
+            network information during LAN scanning.
+        </li>
     </ul>
 
     <h3>Network and Connectivity Permissions</h3>
@@ -152,9 +160,12 @@
         <li><strong>android.permission.QUERY_ALL_PACKAGES</strong>
             <p><strong>Purpose:</strong> Read the list of installed applications.</p>
             <p><strong>Use Case:</strong> Display, search, and sort installed applications in the "Apps" tab.</p>
-            <p><strong>Data Processing:</strong> All data is processed locally only and will not be uploaded to any server.</p>
-            <p><strong>User Consent:</strong> A data disclosure dialog will be displayed when first used, requiring explicit user consent.</p>
-            <p><strong>Example:</strong> Core functionality for the "App Manager" feature to list and view application details.</p>
+            <p><strong>Data Processing:</strong> All data is processed locally only and will not be uploaded to any
+                server.</p>
+            <p><strong>User Consent:</strong> A data disclosure dialog will be displayed when first used, requiring
+                explicit user consent.</p>
+            <p><strong>Example:</strong> Core functionality for the "App Manager" feature to list and view application
+                details.</p>
         </li>
         <li><strong>android.permission.FOREGROUND_SERVICE</strong> & <strong>FOREGROUND_SERVICE_DATA_SYNC</strong>
             <p><strong>Purpose:</strong> Run foreground services for data synchronization.</p>
@@ -178,7 +189,7 @@
     <h3>Impact of Permission Denial</h3>
     <p>Denying certain permissions may limit app functionality, such as:</p>
     <ul>
-        <li>Denying location permissions disables navigation features.</li>
+        <li>Denying location permissions disables <strong>LAN device discovery and SMB scanning</strong> features.</li>
         <li>Denying storage permissions limits file saving or loading.</li>
     </ul>
     <h3>Developer Information</h3>
