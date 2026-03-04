@@ -56,11 +56,14 @@
 
     <h5>Information Collected:</h5>
     <ul>
-        <li>Application name</li>
-        <li>Package name</li>
-        <li>Version information</li>
-        <li>Installation date</li>
+        <li>Application name and package name</li>
+        <li>Version number</li>
+        <li>Install date and last update date</li>
         <li>Application size</li>
+        <li>Requested permissions list</li>
+        <li>Target and minimum SDK version</li>
+        <li>Application category</li>
+        <li>Whether it is a system app</li>
         <li>Application icon</li>
     </ul>
 
@@ -70,6 +73,7 @@
         <li>Provide search and filter functionality</li>
         <li>Provide sorting functionality (by name, size, installation date)</li>
         <li>Display application details</li>
+        <li>Suggest compatible apps when opening files ("Open With" feature)</li>
     </ul>
 
     <h5>Data Processing:</h5>
@@ -158,12 +162,15 @@
             <p><strong>Example:</strong> Install applications directly from the file manager.</p>
         </li>
         <li><strong>android.permission.QUERY_ALL_PACKAGES</strong>
-            <p><strong>Purpose:</strong> Read the list of installed applications.</p>
-            <p><strong>Use Case:</strong> Display, search, and sort installed applications in the "Apps" tab.</p>
-            <p><strong>Data Processing:</strong> All data is processed locally only and will not be uploaded to any
-                server.</p>
-            <p><strong>User Consent:</strong> A data disclosure dialog will be displayed when first used, requiring
-                explicit user consent.</p>
+            <p><strong>Purpose:</strong> Read the list of installed applications and their metadata.</p>
+            <p><strong>Use Case:</strong> Display, search, and sort installed applications in the "Apps" tab. Also
+                used to suggest compatible apps when opening files ("Open With" feature).</p>
+            <p><strong>Data Collected:</strong> Application name, package name, version number, install/update date,
+                size, requested permissions, SDK versions, category, and system app status.</p>
+            <p><strong>Data Processing:</strong> All data is processed and displayed locally on the device only. No
+                data is transmitted, uploaded, shared, or sent to any server, cloud service, or third party.</p>
+            <p><strong>User Consent:</strong> A comprehensive data disclosure dialog is displayed when first
+                accessing the "Apps" tab, requiring explicit user consent before any data is read.</p>
             <p><strong>Example:</strong> Core functionality for the "App Manager" feature to list and view application
                 details.</p>
         </li>
